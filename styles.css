@@ -19,9 +19,97 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--cream);
+  padding: 2rem 1rem;
+}
 
+img {
+  max-width: 100%;
+}
 
+main {
+  background-color: var(--white);
+  border-radius: 10px;
+}
 
+img {
+  border-radius: 10px 10px 0 0;
+}
+
+.product-text {
+  padding: 1rem 2rem;
+}
+
+.product-text > * {
+  margin-bottom: 1rem;
+}
+
+.category,
+.description,
+.btn {
+  font-family: "Montserrat", sans-serif;
+}
+
+.name,
+.price {
+  font-family: "Fraunces", serif;
+}
+
+.category {
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--grey);
+  font-weight: var(--fw-500);
+  font-size: 0.8rem;
+}
+
+.name {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.description {
+  color: var(--grey);
+  line-height: 1.6;
+  font-weight: var(--fw-500);
+}
+
+.price {
+  margin-top: 0.5rem;
+  color: var(--green-500);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  font-weight: var(--fw-700);
+}
+
+.price span {
+  color: var(--grey);
+  font-family: "Montserrat", sans-serif;
+  font-weight: var(--fw-700);
+  font-size: 1rem;
+  margin-left: 1rem;
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--green-500);
+  color: var(--white);
+  font-weight: var(--fw-700);
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn img {
+  margin-right: 0.5rem;
+}
 
 
 @media (min-width: 55rem) {
