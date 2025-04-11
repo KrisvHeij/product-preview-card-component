@@ -20,8 +20,12 @@ html {
 }
 
 body {
+  height: 100vh;
   background-color: var(--cream);
   padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -31,9 +35,11 @@ img {
 main {
   background-color: var(--white);
   border-radius: 10px;
+  max-width: 45rem;
 }
 
-img {
+picture img {
+  display: block;
   border-radius: 10px 10px 0 0;
 }
 
@@ -62,16 +68,17 @@ img {
   letter-spacing: 4px;
   color: var(--grey);
   font-weight: var(--fw-500);
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.7403rem + 0.2546vw, 1rem);
 }
 
 .name {
-  font-size: 2.2rem;
+  font-size: clamp(2.2rem, 2.0807rem + 0.5091vw, 2.6rem);
   line-height: 1;
 }
 
 .description {
   color: var(--grey);
+  font-size: clamp(1rem, 0.9702rem + 0.1273vw, 1.1rem);
   line-height: 1.6;
   font-weight: var(--fw-500);
 }
@@ -79,7 +86,7 @@ img {
 .price {
   margin-top: 0.5rem;
   color: var(--green-500);
-  font-size: 2rem;
+  font-size: clamp(2rem, 1.8508rem + 0.6364vw, 2.5rem);
   display: flex;
   align-items: center;
   font-weight: var(--fw-700);
@@ -89,7 +96,7 @@ img {
   color: var(--grey);
   font-family: "Montserrat", sans-serif;
   font-weight: var(--fw-700);
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.9702rem + 0.1273vw, 1.1rem);
   margin-left: 1rem;
   text-decoration: line-through;
   font-weight: normal;
@@ -99,6 +106,8 @@ img {
   width: 100%;
   background-color: var(--green-500);
   color: var(--white);
+  cursor: pointer;
+  font-size: clamp(1rem, 0.9702rem + 0.1273vw, 1.1rem);
   font-weight: var(--fw-700);
   border: none;
   padding: 1rem;
@@ -109,9 +118,45 @@ img {
 
 .btn img {
   margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--green-700);
 }
 
 
-@media (min-width: 55rem) {
+@media (min-width: 45rem) {
+  main {
+    display: flex;
+  }
+
+  main div {
+    width: 50%;
+  }
+
+  picture img {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .product-text {
+    padding: 2rem;
+  }
+
+  .product-text > * {
+    margin-bottom: 1.5rem;
+  }
+
+  .price span {
+    margin-left: 2rem;
+  }
   
+  .btn {
+    margin-bottom: 0;
+  }
+
+  .btn img {
+    margin-right: 1rem;
+    height: 1.3rem;
+  }
 }
